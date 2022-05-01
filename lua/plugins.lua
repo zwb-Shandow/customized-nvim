@@ -3,6 +3,8 @@ packer.startup({
   function(use)
     -- packer 可以管理自己本身
     use "wbthomason/packer.nvim"
+    -- 主题
+    use "LunarVim/onedarker.nvim"
   end,
   config = {
     -- 并发数限制
