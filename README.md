@@ -59,6 +59,17 @@ python3.8 -m pip install neovim
 >
 > 使用 `~/.config/nvim/` 存储配置文件
 
+### 1.4 插件管理器
+
+目前在 Neovim 最常见的插件管理器主要有 `vim-plug` 和 `packer.nvim` 两个.
+
+`Packer.nvim` 相较于 `vim-plug` 功能更为强大，支持插件间的依赖，指定 commit 版本，Post-install/update hooks，指定分支等功能，使用全 lua 编写，是专门针对最新 Neovim v0.5.0 以上版本设计的，所以推荐使用。
+
+```shell
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
 ## 2. 快捷键
 
 | 快捷键                                          | 说明                                |
