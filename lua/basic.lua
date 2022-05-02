@@ -2,6 +2,9 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
 
+-- 显示行号
+vim.o.number = true
+
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -64,9 +67,8 @@ vim.g.completeopt = "menu, menuone, noselect, noinsert"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 
--- 不可见字符的显示,空格显示为一个点
+-- 不可见字符的显示
 vim.o.list = true
-vim.o.listchars = "space:·"
 
 -- 补全最多显示10行
 vim.o.pumheight = 10
@@ -74,5 +76,5 @@ vim.o.pumheight = 10
 -- 永远显示 tabline
 vim.o.showtabline = 2
 
--- 使用增强状态栏插件后,不再需要vim的模式提示
+-- 使用增强状态栏插件后,不再需要 vim 的模式提示
 vim.o.showmode = false

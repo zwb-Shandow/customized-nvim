@@ -6,9 +6,11 @@ packer.startup({
     -- 主题
     use 'LunarVim/onedarker.nvim'
     -- 侧边栏
-    use({ 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' })
+    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
     -- 顶部标签页
-    use({ 'akinsho/bufferline.nvim', requires = { 'kyandani42/nvim-web-devicons', 'moll/vim-bbye' }})
+    use { 'akinsho/bufferline.nvim', requires = { 'kyandani42/nvim-web-devicons', 'moll/vim-bbye' }}
+    -- 底部信息显示栏
+    use { 'nvim-lualine/lualine.nvim', requires = { 'kyandani42/nvim-web-devicons' }}
   end,
   config = {
     -- 并发数限制
