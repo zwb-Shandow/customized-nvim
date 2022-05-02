@@ -11,6 +11,10 @@ packer.startup({
     use { 'akinsho/bufferline.nvim', requires = { 'kyandani42/nvim-web-devicons', 'moll/vim-bbye' }}
     -- 底部信息显示栏
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyandani42/nvim-web-devicons' }}
+    -- 底部显示栏扩展
+    use 'arkav/lualine-lsp-progress'
+    -- 模糊搜索
+    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }}
   end,
   config = {
     -- 并发数限制

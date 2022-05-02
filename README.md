@@ -112,3 +112,19 @@ pluginKeys.nvimTree = {
 | `<A-j>`/`<A-k>`                        | 跳转至左侧/右侧 buffer    |
 | `<C-w>`                                | 关闭当前 buffer           |
 | `<leader>bl`/`<leader>bh`/`<leader>bc` | 关闭右侧/左侧/当前 buffer |
+
+- **模糊搜索插件(telescope)**
+
+| 快捷键                   | 说明               |
+| ------------------------ | ------------------ |
+| `<C-p>`                  | 查找文件           |
+| `<C-f>`                  | 全局搜索           |
+| `<leader>f`              | 当前 buffer 内搜索 |
+| `<C-b>`                  | 展示 buffers       |
+| `<C-j>`/`<C-k>`          | 上下移动           |
+| `<C-/>`                  | 快捷键展示         |
+| `<C-c>`                  | 关闭搜索窗         |
+| `:Telescope git_*`       | git 相关           |
+| `:Telescope commands`    | 展示可用命令       |
+| `:Telescope man_pages`   | 展示帮助文档       |
+| `:Telescope colorscheme` | 展示主题           |
