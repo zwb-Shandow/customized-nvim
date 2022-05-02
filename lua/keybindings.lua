@@ -55,3 +55,13 @@ map("v", "p", '"_dP', opt)
 map("n", "q", ':q<CR>', opt)
 map("n", "qq", ':q!<CR>', opt)
 map("n", "Q", ':qa!<CR>', opt)
+
+-- 插件快捷键
+local pluginKeys = {}
+
+-- nvim-tree
+-- 打开/关闭侧边栏
+map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+pluginKeys.nvimTreeList = {
+  -- 自定义 nvim-tree 快捷键
+}

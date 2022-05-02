@@ -72,6 +72,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## 2. 快捷键
 
+### 2.1 基础快捷键(与插件无关)
+
 | 快捷键                                          | 说明                                |
 | :---------------------------------------------- | :---------------------------------- |
 | `,`                                             | Leader Key                          |
@@ -84,3 +86,21 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 | `<C-u>`/`<C-d>`                                 | 上移9行/下移9行                     |
 | `q`/`qq`/`Q`                                    | 退出(均不保存)                      |
 
+### 2.2 插件快捷键
+
+- **侧边栏插件(nvim-tree)**
+
+| 快捷键                      | 说明                                            |
+| --------------------------- | ----------------------------------------------- |
+| `<A-m>`                     | 打开/隐藏侧边栏                                 |
+| `a`/`d`/`r`/`x`/`c`/`p`/`s` | create/remove/rename/cut/copy/paste/system_open |
+| `<C-v>`/`<C-x>`/`<C-t>`     | vsplit/split/open_in_newtab                     |
+| `g?`                        | nvim-tree 快捷键帮助                            |
+
+当前使用 `nvim-tree.lua` 插件的默认配置, 若需自定义配置, 请在 `lua/keybindings.lua` 中添加.
+
+```lua
+pluginKeys.nvimTree = {
+    -- 自定义 nvim-tree 快捷键
+}
+```

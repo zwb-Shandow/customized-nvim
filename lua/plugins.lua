@@ -1,10 +1,12 @@
-local packer = require("packer")
+local packer = require('packer')
 packer.startup({
   function(use)
     -- packer 可以管理自己本身
-    use "wbthomason/packer.nvim"
+    use 'wbthomason/packer.nvim'
     -- 主题
-    use "LunarVim/onedarker.nvim"
+    use 'LunarVim/onedarker.nvim'
+    -- 侧边栏
+    use({ 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' })
   end,
   config = {
     -- 并发数限制
