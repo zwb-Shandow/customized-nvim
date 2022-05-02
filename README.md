@@ -104,3 +104,11 @@ pluginKeys.nvimTree = {
     -- 自定义 nvim-tree 快捷键
 }
 ```
+
+- **标签页插件(bufferline)**
+
+| 快捷键                                 | 说明                      |
+| -------------------------------------- | ------------------------- |
+| `<A-j>`/`<A-k>`                        | 跳转至左侧/右侧 buffer    |
+| `<C-w>`                                | 关闭当前 buffer           |
+| `<leader>bl`/`<leader>bh`/`<leader>bc` | 关闭右侧/左侧/当前 buffer |

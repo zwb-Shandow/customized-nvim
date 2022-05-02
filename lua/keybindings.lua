@@ -65,3 +65,13 @@ map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
   -- 自定义 nvim-tree 快捷键
 }
+
+-- bufferline
+-- buffer 切换
+map("n", "<A-j>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<A-k>", ":BufferLineCycleNext<CR>", opt)
+-- buffer 关闭
+map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
