@@ -17,6 +17,8 @@ packer.startup({
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }}
     -- 启动页与项目列表
     use 'glepnir/dashboard-nvim'
+    -- 模糊搜索扩展
+    use 'ahmedkhalf/project.nvim'
   end,
   config = {
     -- 并发数限制

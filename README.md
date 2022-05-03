@@ -120,6 +120,7 @@ pluginKeys.nvimTree = {
 | `<C-p>`                  | 查找文件           |
 | `<C-f>`                  | 全局搜索           |
 | `<leader>f`              | 当前 buffer 内搜索 |
+| `<leader>p`              | 展示 projects      |
 | `<C-b>`                  | 展示 buffers       |
 | `<C-j>`/`<C-k>`          | 上下移动           |
 | `<C-/>`                  | 快捷键展示         |

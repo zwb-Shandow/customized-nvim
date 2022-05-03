@@ -85,6 +85,8 @@ map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 map("n", "<C-b>", ":Telescope buffers<CR>", opt)
 -- 当前 buffer 内搜索
 map("n", "<leader>f", ":Telescope current_buffer_fuzzy_find<CR>", opt)
+-- 展示 projects
+map("n", "<leader>p", ":Telescope projects<CR>", opt)
 -- 模式快捷键
 pluginKeys.telescopeList = {
   i = {

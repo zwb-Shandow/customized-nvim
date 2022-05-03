@@ -1,30 +1,31 @@
-local status, nvim_tree = pcall(require, 'nvim-tree')
+local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
   vim.notify("not found nvim-tree")
   return
 end
 
 -- 列表操作快捷键
-local list_keys = require('keybindings').nvimTreeList
+local list_keys = require("keybindings").nvimTreeList
 nvim_tree.setup({
   -- 不显示 git 状态图标
   git = {
     enable = false,
   },
   -- project plugin 需要这样设置
-  update_cwd          = true,
+  update_cwd = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
   },
-  -- 隐藏 .文件和 build 文件
-  fileters = {
+  -- 隐藏 .文件和 build 文件夹
+  filters = {
     dotfiles = true,
     custom = { 'build' },
   },
   view = {
     -- 宽度
     width = 40,
+    -- 位置
     side = 'left',
     -- 隐藏根目录
     hide_root_folder = false,
@@ -50,8 +51,6 @@ nvim_tree.setup({
 })
 
 -- 自动关闭
-vim.cmd(
-[[
+vim.cmd([[
     autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() = 'NvimTree_' . tabpagenr() | quit | endif
-  ]]
-)
+]])
