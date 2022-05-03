@@ -15,6 +15,8 @@ packer.startup({
     use 'arkav/lualine-lsp-progress'
     -- 模糊搜索
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }}
+    -- 启动页与项目列表
+    use 'glepnir/dashboard-nvim'
   end,
   config = {
     -- 并发数限制
