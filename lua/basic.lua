@@ -5,12 +5,16 @@ vim.o.fileencoding = "utf-8"
 -- 显示行号
 vim.o.number = true
 
+-- 允许光标出现在最后一个字符的后面
+vim.o.virtualedit = "onemore"
+
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 
 -- 高亮所在行
 vim.wo.cursorline = true
+vim.wo.cursorcolumn = true
 
 -- Tab = 2个空格
 vim.o.tabstop = 2
