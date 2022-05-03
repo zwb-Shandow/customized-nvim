@@ -21,6 +21,8 @@ packer.startup({
     use 'ahmedkhalf/project.nvim'
     -- 语法高亮
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    -- 彩虹括号
+    use 'p00f/nvim-ts-rainbow'
   end,
   config = {
     -- 并发数限制

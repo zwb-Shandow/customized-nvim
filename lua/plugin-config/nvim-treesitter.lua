@@ -27,6 +27,32 @@ treesitter.setup({
   indent = {
     enable = true,
   },
+  -- 启用彩虹括号
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+    -- setting colors
+    colors = {
+      "#00ffff",
+      "#ffff00",
+      "#66ff33",
+      "#ff66ff",
+      "#ffffff",
+      "#ff99cc",
+      "#43CD80",
+    },
+    -- term colors
+    termcolors = {
+      "Blue",
+      "Yellow",
+      "Cyan",
+      "Magenta",
+      "White",
+      "Red",
+      "Green",
+    },
+  },
 })
 
 -- 开启 Folding 模块
