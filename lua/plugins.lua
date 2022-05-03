@@ -19,6 +19,8 @@ packer.startup({
     use 'glepnir/dashboard-nvim'
     -- 模糊搜索扩展
     use 'ahmedkhalf/project.nvim'
+    -- 语法高亮
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   end,
   config = {
     -- 并发数限制

@@ -129,3 +129,12 @@ pluginKeys.nvimTree = {
 | `:Telescope commands`    | 展示可用命令       |
 | `:Telescope man_pages`   | 展示帮助文档       |
 | `:Telescope colorscheme` | 展示主题           |
+
+- 代码高亮(nvim-treesitter)
+
+| 快捷键    | 说明                    |
+| --------- | ----------------------- |
+| `<CR>`    | 扩展选中代码片段        |
+| `<BS>`    | 回退选中片段            |
+| `TAB`     | 扩展选中代码片段(scope) |
+| `zc`/`zo` | 代码折叠/打开           |
