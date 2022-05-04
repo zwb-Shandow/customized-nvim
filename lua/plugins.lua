@@ -25,6 +25,18 @@ packer.startup({
     use 'p00f/nvim-ts-rainbow'
     -- 管理 Language server
     use { 'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer' }
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
   end,
   config = {
     -- 并发数限制
