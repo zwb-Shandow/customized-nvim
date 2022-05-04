@@ -24,3 +24,4 @@ require("plugin-config.comment")
 -- 内置 LSP
 require("lsp.setup")
 require("lsp.cmp")
+require("lsp.formatter")

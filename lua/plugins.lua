@@ -41,6 +41,8 @@ packer.startup({
     use 'windwp/nvim-autopairs'
     -- 代码注释
     use 'numToStr/Comment.nvim'
+    -- 代码格式化
+    use 'mhartington/formatter.nvim'
   end,
   config = {
     -- 并发数限制
