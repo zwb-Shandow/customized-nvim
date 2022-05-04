@@ -13,6 +13,11 @@ local servers = {
   clangd = require("lsp.config.c++"),
   cmake = require("lsp.config.cmake"),
   jedi_language_server = require("lsp.config.python"),
+  dockerls = require("lsp.config.docker"),
+  jsonls = require("lsp.config.json"),
+  prosemd_lsp = require("lsp.config.markdown"),
+  vimls = require("lsp.config.vim"),
+  yamlls = require("lsp.config.yaml"),
 }
 
 -- 自动安装 Language Servers
