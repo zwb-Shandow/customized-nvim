@@ -18,6 +18,7 @@ local servers = {
   prosemd_lsp = require("lsp.config.markdown"),
   vimls = require("lsp.config.vim"),
   yamlls = require("lsp.config.yaml"),
+  bashls = require("lsp.config.bash"),
 }
 
 -- 自动安装 Language Servers
