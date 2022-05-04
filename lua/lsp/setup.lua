@@ -10,6 +10,7 @@ end
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
   sumneko_lua = require("lsp.config.lua"),
+  clangd = require("lsp.config.c++"),
 }
 
 -- 自动安装 Language Servers
