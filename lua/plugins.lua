@@ -23,6 +23,8 @@ packer.startup({
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     -- 彩虹括号
     use 'p00f/nvim-ts-rainbow'
+    -- 管理 Language server
+    use { 'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer' }
   end,
   config = {
     -- 并发数限制
