@@ -19,6 +19,7 @@ require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require("plugin-config.nvim-autopairs")
+require("plugin-config.comment")
 
 -- 内置 LSP
 require("lsp.setup")

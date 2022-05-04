@@ -139,4 +139,17 @@ pluginKeys.cmp = function(cmp)
   }
 end
 
+-- comment 代码注释
+pluginKeys.comment = {
+	-- Normal 模快捷键
+	toggler = {
+		line = "gcc",  -- 行注释
+		block = "gbc",  -- 块注释
+  },
+	-- Visual 模式
+	opleader = {
+		line = "gc",
+		block = "gb",
+	},
+}
 return pluginKeys

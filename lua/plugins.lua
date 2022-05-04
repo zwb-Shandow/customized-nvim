@@ -39,6 +39,8 @@ packer.startup({
     use 'rafamadriz/friendly-snippets'
     -- 括号补全
     use 'windwp/nvim-autopairs'
+    -- 代码注释
+    use 'numToStr/Comment.nvim'
   end,
   config = {
     -- 并发数限制
