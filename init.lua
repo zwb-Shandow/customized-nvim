@@ -18,6 +18,7 @@ require("plugin-config.telescope")
 require("plugin-config.dashboard")
 require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
+require("plugin-config.nvim-autopairs")
 
 -- 内置 LSP
 require("lsp.setup")
