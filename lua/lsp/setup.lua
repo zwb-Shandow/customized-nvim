@@ -11,6 +11,7 @@ end
 local servers = {
   sumneko_lua = require("lsp.config.lua"),
   clangd = require("lsp.config.c++"),
+  cmake = require("lsp.config.cmake"),
 }
 
 -- 自动安装 Language Servers
