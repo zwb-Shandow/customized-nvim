@@ -14,6 +14,10 @@ map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
 map("n", "so", "<C-w>o", opt)
 
+-- 复制到系统剪切板
+map("v", "<leader><leader>y", '"+y', opt)
+-- 将系统剪切板内容粘贴至nvim
+map("n", "<leader><leader>p", '"+p', opt)
 -- 窗口跳转
 map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-j>", "<C-w>j", opt)

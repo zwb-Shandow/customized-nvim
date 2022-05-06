@@ -85,6 +85,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 | `J`/`K`                                         | 上下移动选中文本                    |
 | `<C-u>`/`<C-d>`                                 | 上移9行/下移9行                     |
 | `q`/`qq`/`Q`                                    | 退出(均不保存)                      |
+| `<leader><leader>y`/`<leader><leader>p`         | 复制到系统剪切板/从系统剪切板粘贴   |
 
 ### 2.2 插件快捷键
 
