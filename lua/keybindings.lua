@@ -156,4 +156,8 @@ pluginKeys.comment = {
 		block = "gb",
 	},
 }
+
+-- symbols-outline 符号列表
+map("n", "<Tab>", ":SymbolsOutline<CR>", opt)
+
 return pluginKeys

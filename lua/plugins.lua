@@ -43,6 +43,8 @@ packer.startup({
     use 'numToStr/Comment.nvim'
     -- 代码格式化
     use 'mhartington/formatter.nvim'
+    -- 符号列表
+    use 'simrat39/symbols-outline.nvim'
   end,
   config = {
     -- 并发数限制
