@@ -160,4 +160,7 @@ pluginKeys.comment = {
 -- symbols-outline 符号列表
 map("n", "<Tab>", ":SymbolsOutline<CR>", opt)
 
+-- toggleterm 终端
+map("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", opt)
+
 return pluginKeys
