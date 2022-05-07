@@ -30,7 +30,37 @@ formatter.setup({
 			}
 			end
 		},
-	}
+		sh = {
+			-- shell script formatter
+			function()
+				return {
+					exe = "shfmt",
+					args = { "-i", 2 },
+					stdin = true,
+				}
+			end,
+		},
+		cmake = {
+			function()
+				return {
+					exe = "cmake-format",
+					args = { "-" },
+					stdin = true,
+				}
+			end,
+		},
+		lua = {
+			function()
+				return {
+					exe = "stylua",
+					args = {
+						"-",
+					},
+					stdin = true,
+				}
+			end,
+		},
+	},
 })
 
 -- format on save

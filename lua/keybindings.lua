@@ -163,6 +163,9 @@ pluginKeys.comment = {
 	},
 }
 
+-- formatter 代码格式化
+map("n", "<F2>", ":Format<CR>", opt)
+
 -- symbols-outline 符号列表
 map("n", "<Tab>", ":SymbolsOutline<CR>", opt)
 
