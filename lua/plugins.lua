@@ -1,4 +1,32 @@
-local packer = require("packer")
+-- 自动安装 Packer.nvim
+-- 安装目录: ~/.local/share/nvim/site/pack/packer/
+local fn = vim.fn
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+local packer_bootstrap
+if fn.empty(fn.glob(install_path)) > 0 then
+	vim.notify("Packer.nvim is installing, please wait...")
+	packer_bootstrap = fn.system({
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+
+	local rtp_addition = vim.fn.stdpath("data") .. "/site/pack/*/start/*"
+	if not string.find(vim.o.runtimepath, rtp_addition) then
+		vim.o.runtimepath = rtp_addition .. "," .. vim.o.runtimepath
+	end
+	vim.notify("Packer.nvim install success!")
+end
+
+local status, packer = pcall(require, "packer")
+if not status then
+	vim.notify("not found packer.nvim")
+	return
+end
+
 packer.startup({
 	function(use)
 		-- packer 可以管理自己本身
@@ -24,7 +52,8 @@ packer.startup({
 		-- 彩虹括号
 		use("p00f/nvim-ts-rainbow")
 		-- 管理 Language server
-		use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+		use("neovim/nvim-lspconfig")
+		use({ "williamboman/nvim-lsp-installer", commit = "36b44679f7cc73968dbb3b09246798a19f7c14e0" })
 		-- 补全引擎
 		use("hrsh7th/nvim-cmp")
 		-- snippet 引擎
@@ -50,6 +79,10 @@ packer.startup({
 		-- ui
 		use("onsails/lspkind-nvim")
 		use("tami5/lspsaga.nvim")
+
+		if packer_bootstrap then
+			packer.sync()
+		end
 	end,
 	config = {
 		-- 并发数限制
