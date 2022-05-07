@@ -5,7 +5,7 @@ if not status then
 end
 
 toggleterm.setup({
-  -- size can be a number or function which is passed the current terminal
+	-- size can be a number or function which is passed the current terminal
 	size = 20,
 	open_mapping = [[<C-\>]],
 	shade_terminals = true,
@@ -16,7 +16,7 @@ toggleterm.setup({
 
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({
-  cmd = "lazygit",
+	cmd = "lazygit",
 	dir = "git_dir",
 	direction = "float",
 	hidden = true,

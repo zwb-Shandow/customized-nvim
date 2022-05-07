@@ -13,9 +13,9 @@ formatter.setup({
 					exe = "clang-format",
 					args = { "--assume-filename", vim.api.nvim_buf_get_name(0) },
 					stdin = true,
-					cwd = vim.fn.expand('%:p:h')  -- Run clang-format in cwd of the file
-					}
-			end
+					cwd = vim.fn.expand("%:p:h"), -- Run clang-format in cwd of the file
+				}
+			end,
 		},
 
 		python = {
@@ -24,11 +24,11 @@ formatter.setup({
 					exe = "python3 -m autopep8",
 					args = {
 						"--in-place --aggressive --aggressive",
-						vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))
+						vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
 					},
-					stdin = false
-			}
-			end
+					stdin = false,
+				}
+			end,
 		},
 		sh = {
 			-- shell script formatter

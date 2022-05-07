@@ -57,9 +57,9 @@ map("n", "<C-d>", "9j", opt)
 map("v", "p", '"_dP', opt)
 
 -- 退出
-map("n", "q", ':q<CR>', opt)
-map("n", "qq", ':q!<CR>', opt)
-map("n", "Q", ':qa!<CR>', opt)
+map("n", "q", ":q<CR>", opt)
+map("n", "qq", ":q!<CR>", opt)
+map("n", "Q", ":qa!<CR>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}
@@ -68,7 +68,7 @@ local pluginKeys = {}
 -- 打开/关闭侧边栏
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
-  -- 自定义 nvim-tree 快捷键
+	-- 自定义 nvim-tree 快捷键
 }
 
 -- bufferline
@@ -94,68 +94,68 @@ map("n", "<leader>f", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 -- map("n", "<leader>p", ":Telescope projects<CR>", opt)
 -- 模式快捷键
 pluginKeys.telescopeList = {
-  i = {
-    -- 上下移动
-    ["<C-j>"] = "move_selection_next",
-    ["<C-k>"] = "move_selection_previous",
-  },
+	i = {
+		-- 上下移动
+		["<C-j>"] = "move_selection_next",
+		["<C-k>"] = "move_selection_previous",
+	},
 }
 
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
--- rename
--- mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
-mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
--- code action
--- mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
-mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
--- go xx
-mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
-mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
-mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
-mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
-mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.reference()<CR>", opt)
--- diagnostic
--- mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
--- mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
--- mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
-mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
-mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opt)
-mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opt)
+	-- rename
+	-- mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+	mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
+	-- code action
+	-- mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+	mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
+	-- go xx
+	mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+	mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+	mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
+	mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
+	mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.reference()<CR>", opt)
+	-- diagnostic
+	-- mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+	-- mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+	-- mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+	mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
+	mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opt)
+	mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opt)
 end
 
 -- nvim-cmp 自动补全
 pluginKeys.cmp = function(cmp)
-  return {
-    -- 出现补全
-    ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    -- 取消
-    ["<A-,>"] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close()
-    }),
-    -- 上一个
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    -- 下一个
-    ["<Tab>"] = cmp.mapping.select_next_item(),
-    -- 确认
-    ["<CR>"] = cmp.mapping.confirm({
-      select = true,
-      behavior = cmp.ConfirmBehavior.Replace
-    }),
-    -- 如果窗口内容太多，可以滚动
-    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
-    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-  }
+	return {
+		-- 出现补全
+		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		-- 取消
+		["<A-,>"] = cmp.mapping({
+			i = cmp.mapping.abort(),
+			c = cmp.mapping.close(),
+		}),
+		-- 上一个
+		["<C-k>"] = cmp.mapping.select_prev_item(),
+		-- 下一个
+		["<Tab>"] = cmp.mapping.select_next_item(),
+		-- 确认
+		["<CR>"] = cmp.mapping.confirm({
+			select = true,
+			behavior = cmp.ConfirmBehavior.Replace,
+		}),
+		-- 如果窗口内容太多，可以滚动
+		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+	}
 end
 
 -- comment 代码注释
 pluginKeys.comment = {
 	-- Normal 模快捷键
 	toggler = {
-		line = "gcc",  -- 行注释
-		block = "gbc",  -- 块注释
-  },
+		line = "gcc", -- 行注释
+		block = "gbc", -- 块注释
+	},
 	-- Visual 模式
 	opleader = {
 		line = "gc",
