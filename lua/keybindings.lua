@@ -18,6 +18,7 @@ map("n", "so", "<C-w>o", opt)
 map("v", "<leader><leader>y", '"+y', opt)
 -- 将系统剪切板内容粘贴至nvim
 map("n", "<leader><leader>p", '"+p', opt)
+
 -- 窗口跳转
 map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-j>", "<C-w>j", opt)
@@ -90,7 +91,7 @@ map("n", "<C-b>", ":Telescope buffers<CR>", opt)
 -- 当前 buffer 内搜索
 map("n", "<leader>f", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 -- 展示 projects
-map("n", "<leader>p", ":Telescope projects<CR>", opt)
+-- map("n", "<leader>p", ":Telescope projects<CR>", opt)
 -- 模式快捷键
 pluginKeys.telescopeList = {
   i = {
@@ -103,9 +104,11 @@ pluginKeys.telescopeList = {
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
 -- rename
-mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+-- mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
 -- code action
-mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+-- mapbuf("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
 -- go xx
 mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
 mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
@@ -113,9 +116,12 @@ mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
 mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
 mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.reference()<CR>", opt)
 -- diagnostic
-mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
-mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
-mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+-- mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+-- mapbuf("n", "gk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+-- mapbuf("n", "gj", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
+mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opt)
+mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opt)
 end
 
 -- nvim-cmp 自动补全

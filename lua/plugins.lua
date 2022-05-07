@@ -47,6 +47,9 @@ packer.startup({
     use 'simrat39/symbols-outline.nvim'
     -- 终端
     use { 'akinsho/toggleterm.nvim', tag = 'V1.*' }
+	-- ui
+	use 'onsails/lspkind-nvim'
+	use 'tami5/lspsaga.nvim'
   end,
   config = {
     -- 并发数限制
