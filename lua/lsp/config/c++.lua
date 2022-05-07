@@ -1,5 +1,13 @@
 local opts = {
-	settings = nil,
+  settings = {
+	  clangd = {
+		arguments = {
+		  "--completion-style=detailed",
+		  "--pch-storage=memory",
+		  "--header-insertion=never",
+        },
+	  },
+	},
   on_attach = function(client, bufnr)
     -- 禁用格式化功能，交给专门插件处理
     client.resolved_capabilities.document_formatting = false
