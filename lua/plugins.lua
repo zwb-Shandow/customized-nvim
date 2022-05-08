@@ -79,6 +79,8 @@ packer.startup({
 		-- ui
 		use("onsails/lspkind-nvim")
 		use("tami5/lspsaga.nvim")
+		-- 单词高亮
+		use("yamatsum/nvim-cursorline")
 
 		if packer_bootstrap then
 			packer.sync()

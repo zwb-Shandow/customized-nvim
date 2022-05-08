@@ -21,6 +21,7 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.nvim-autopairs")
 require("plugin-config.comment")
 require("plugin-config.toggleterm")
+require("plugin-config.nvim-cursorline")
 
 -- 内置 LSP
 require("lsp.setup")
