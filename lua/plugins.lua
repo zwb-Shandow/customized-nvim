@@ -81,6 +81,8 @@ packer.startup({
 		use("tami5/lspsaga.nvim")
 		-- 单词高亮
 		use("yamatsum/nvim-cursorline")
+		-- 快速跳转
+		use({ "phaazon/hop.nvim", branch = "v1" })
 
 		if packer_bootstrap then
 			packer.sync()

@@ -163,6 +163,10 @@ pluginKeys.comment = {
 	},
 }
 
+-- hop 快速跳转
+map("n", "f", "<cmd> lua require'hop'.hint_lines()<CR>", opt)
+map("n", "F", "<cmd> lua require'hop'.hint_words()<CR>", opt)
+
 -- formatter 代码格式化
 map("n", "<F2>", ":Format<CR>", opt)
 
