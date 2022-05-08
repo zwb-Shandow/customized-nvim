@@ -1,8 +1,4 @@
-local status, comment = pcall(require, "Comment")
-if not status then
-	vim.notify("not found Comment")
-	return
-end
+local comment = require("utils").requirePlugin("Comment")
 
 local default_opts = {
 	-- Add a space b/w comment and the line

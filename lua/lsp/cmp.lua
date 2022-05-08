@@ -1,4 +1,4 @@
-local cmp = require("cmp")
+local cmp = require("utils").requirePlugin("cmp")
 
 cmp.setup({
 	-- 指定 snippet 引擎

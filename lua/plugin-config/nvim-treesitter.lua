@@ -1,8 +1,4 @@
-local status, treesitter = pcall(require, "nvim-treesitter.configs")
-if not status then
-	vim.notify("not found nvim-treesitter")
-	return
-end
+local treesitter = require("utils").requirePlugin("nvim-treesitter.configs")
 
 treesitter.setup({
 	-- 安装 language parser

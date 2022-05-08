@@ -1,8 +1,4 @@
-local status, project = pcall(require, "project_nvim")
-if not status then
-	vim.notify("not found project_nvim")
-	return
-end
+local project = require("utils").requirePlugin("project_nvim")
 
 -- nvim-tree 支持
 vim.g.nvim_tree_respect_buf_cmd = 1

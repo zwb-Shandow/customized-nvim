@@ -1,8 +1,4 @@
-local status, telescope = pcall(require, "telescope")
-if not status then
-	vim.notify("not found telescope")
-	return
-end
+local telescope = require("utils").requirePlugin("telescope")
 
 telescope.setup({
 	defaults = {

@@ -12,7 +12,7 @@ for type, icon in pairs(signs) do
 end
 
 -- lspkind
-local lspkind = require("lspkind")
+local lspkind = require("utils").requirePlugin("lspkind")
 lspkind.init({
 	-- default: true
 	-- with_text = true

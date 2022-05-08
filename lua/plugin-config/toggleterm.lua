@@ -1,8 +1,4 @@
-local status, toggleterm = pcall(require, "toggleterm")
-if not status then
-	vim.notify("not found toggleterm")
-	return
-end
+local toggleterm = require("utils").requirePlugin("toggleterm")
 
 toggleterm.setup({
 	-- size can be a number or function which is passed the current terminal

@@ -1,8 +1,4 @@
-local status, bufferline = pcall(require, "bufferline")
-if not status then
-	vim.notify("not found bufferline")
-	return
-end
+local bufferline = require("utils").requirePlugin("bufferline")
 
 -- bufferline 配置
 bufferline.setup({

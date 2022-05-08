@@ -1,8 +1,4 @@
-local status, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status then
-	vim.notify("not found nvim-lsp-installer")
-	return
-end
+local lsp_installer = require("utils").requirePlugin("nvim-lsp-installer")
 
 -- 安装列表
 -- { key: 语言 value: 配置文件 }

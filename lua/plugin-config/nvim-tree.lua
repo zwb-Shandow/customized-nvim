@@ -1,8 +1,4 @@
-local status, nvim_tree = pcall(require, "nvim-tree")
-if not status then
-	vim.notify("not found nvim-tree")
-	return
-end
+local nvim_tree = require("utils").requirePlugin("nvim-tree")
 
 -- 列表操作快捷键
 local list_keys = require("keybindings").nvimTreeList

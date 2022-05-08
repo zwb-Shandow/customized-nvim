@@ -1,7 +1,3 @@
-local status_ok, todo = pcall(require, "todo-comments")
-if not status_ok then
-	vim.notify("not found todo-comments")
-	return
-end
+local todo = require("utils").requirePlugin("todo-comments")
 
 todo.setup({})

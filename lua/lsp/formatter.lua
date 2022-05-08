@@ -1,8 +1,4 @@
-local status, formatter = pcall(require, "formatter")
-if not status then
-	vim.notify("not found formatter")
-	return
-end
+local formatter = require("utils").requirePlugin("formatter")
 
 formatter.setup({
 	filetype = {

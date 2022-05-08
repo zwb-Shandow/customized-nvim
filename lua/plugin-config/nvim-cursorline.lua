@@ -1,8 +1,4 @@
-local status_ok, cursor = pcall(require, "nvim-cursorline")
-if not status_ok then
-	vim.notify("not found nvim-cursorline")
-	return
-end
+local cursor = require("utils").requirePlugin("nvim-cursorline")
 
 cursor.setup({
 	cursorline = {
