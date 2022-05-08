@@ -87,6 +87,8 @@ packer.startup({
 		use({ "zwb-Shandow/neogen", requires = "nvim-treesitter/nvim-treesitter" })
 		-- todo 高亮
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
+		-- 通知管理器
+		use("rcarriga/nvim-notify")
 
 		if packer_bootstrap then
 			packer.sync()
