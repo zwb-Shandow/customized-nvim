@@ -85,6 +85,8 @@ packer.startup({
 		use({ "phaazon/hop.nvim", branch = "v1" })
 		-- 多语言注释工具
 		use({ "zwb-Shandow/neogen", requires = "nvim-treesitter/nvim-treesitter" })
+		-- todo 高亮
+		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 
 		if packer_bootstrap then
 			packer.sync()
