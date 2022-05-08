@@ -83,6 +83,8 @@ packer.startup({
 		use("yamatsum/nvim-cursorline")
 		-- 快速跳转
 		use({ "phaazon/hop.nvim", branch = "v1" })
+		-- 多语言注释工具
+		use({ "zwb-Shandow/neogen", requires = "nvim-treesitter/nvim-treesitter" })
 
 		if packer_bootstrap then
 			packer.sync()

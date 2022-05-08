@@ -23,6 +23,7 @@ require("plugin-config.comment")
 require("plugin-config.toggleterm")
 require("plugin-config.nvim-cursorline")
 require("plugin-config.hop")
+require("plugin-config.neogen")
 
 -- 内置 LSP
 require("lsp.setup")
