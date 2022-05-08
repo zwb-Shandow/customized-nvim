@@ -36,7 +36,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- 搜索不要高亮
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- 命令行高为2
 vim.o.cmdheight = 2

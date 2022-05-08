@@ -12,9 +12,5 @@ project.setup({
 	patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
 })
 
-local status, telescope = pcall(require, "telescope")
-if not status then
-	vim.notify("not found telescope")
-	return
-end
+local telescope = require("telescope")
 pcall(telescope.load_extension, "projects")
