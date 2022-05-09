@@ -1,4 +1,4 @@
-local lsp_installer = require("utils").requirePlugin("nvim-lsp-installer")
+local lsp_installer = require("utils").requirePlugin("nvim-lsp-installer.servers")
 
 -- 安装列表
 -- { key: 语言 value: 配置文件 }
@@ -19,23 +19,29 @@ local servers = {
 
 -- 自动安装 Language Servers
 for name, _ in pairs(servers) do
-	local server_is_found, server = lsp_installer.get_server(name)
-	if server_is_found then
-		if not server:is_installed() then
-			vim.notify("Installing " .. name)
-			server:install()
+	local server_available, requested_server = lsp_installer.get_server(name)
+	local install_notfication = false
+	if server_available then
+		if not requested_server:is_installed() then
+			vim.notify(string.format("Installing server: [%s]", name))
+			requested_server:install()
+			install_notfication = true
 		end
 	end
-end
 
-lsp_installer.on_server_ready(function(server)
-	local config = servers[server.name]
-	if config == nil then
-		return
-	end
-	if config.on_setup then
-		config.on_setup(server)
-	else
-		server:setup({})
-	end
-end)
+	requested_server:on_ready(function(server)
+		if install_notfication then
+			vim.notify(string.format("Installation complete for [%s] server", server.name))
+		end
+		install_notfication = false
+		local config = servers[server.name]
+		if config == nil then
+			return
+		end
+		if config.on_setup then
+			config.on_setup(server)
+		else
+			server:setup({})
+		end
+	end)
+end
